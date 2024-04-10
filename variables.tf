@@ -3,6 +3,12 @@ variable "name" {
   type        = string
 }
 
+variable "domain" {
+  type    = string
+  default = null
+  nullable = true
+}
+
 variable "type" {
   description = "Type of LB to create"
   type        = string

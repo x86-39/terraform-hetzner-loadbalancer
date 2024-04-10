@@ -1,5 +1,5 @@
 resource "hcloud_load_balancer" "lb" {
-  name               = var.name
+  name               = var.domain != null && var.domain != "" ? "${var.name}.${var.domain}" : var.name
   load_balancer_type = var.type
   location           = var.location
   network_zone       = var.network_zone
